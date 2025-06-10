@@ -1,0 +1,143 @@
+/* Clean vertical timeline layout */
+.experience-new {
+  padding: 60px 0;
+  position: relative;
+  background: linear-gradient(to bottom, #1e1e1e, #121212);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.timeline-clean {
+  position: relative;
+  border-left: 3px solid rgba(128, 128, 128, 0.3);
+  margin-left: 20px;
+  padding-left: 30px;
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.timeline-entry:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.timeline-entry:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -35px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px #007bff;
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+.timeline-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.timeline-logo:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.timeline-content {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.timeline-content.hover-effect:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.company-name {
+  margin-top: -0.25rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.duration-location {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 0.25rem;
+}
+
+/* Light / Dark Themes */
+.light {
+  --card-bg: #ffffff;
+  --text-color: #212529;
+}
+
+.dark {
+  --card-bg: #2a2a2a;
+  --text-color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-clean {
+    border-left: 2px solid rgba(128, 128, 128, 0.3);
+    margin-left: 10px;
+    padding-left: 20px;
+  }
+
+  .timeline-marker {
+    width: 32px;
+    height: 32px;
+    left: -28px;
+  }
+
+  .timeline-logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-content {
+    padding: 0.75rem 1rem;
+  }
+}
