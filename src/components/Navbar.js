@@ -1,5 +1,4 @@
 import React from 'react';
-import Scrollspy from 'react-scrollspy';
 
 function Navbar({ onNavigate, activePage }) {
   const navItems = ['home', 'skills', 'experience', 'education', 'projects', 'contact'];
