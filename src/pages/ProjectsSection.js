@@ -3,19 +3,26 @@ import cryptoImg from '../assets/projects/ai_crypto.png';
 import vscodeImg from '../assets/projects/llm_vscode.png';
 import chatImg from '../assets/projects/team_chat.png';
 import blogImg from '../assets/projects/blog_nest.png';
+import bioscan from '../assets/projects/bioscan.png';
 
 const projects = [
   {
     title: 'AI-Enhanced Crypto Portfolio Tracker',
     img: cryptoImg,
-    github: 'https://github.com/Karunakar-reddy-04/Real_Time_Messaging_Platform',
+    github: 'https://github.com/Karunakar-reddy-04/crypto-portfolio-tracker',
     desc: 'Real-time crypto tracker with GPT-based AI insights using React, Node.js, and CoinGecko API.'
   },
   {
     title: 'Cross-LLM VS Code Extension',
     img: vscodeImg,
-    github: 'https://github.com/Karunakar-reddy-04/Real_Time_Messaging_Platform',
+    github: 'https://github.com/Karunakar-reddy-04/Block-Based-Multi-Agent-LLM-Extension',
     desc: 'VS Code plugin integrating GPT-4, Bard, AI21 with TypeScript for real-time code validation.'
+  },
+ {
+    title: 'BioScan AI – AI-Powered Medical Report Analyzer ',
+    img: bioscan,
+    github:  'https://github.com/Karunakar-reddy-04/Medical-reports-bioscan-AI/tree/main',
+    desc: 'AI-powered medical imaging analyzer (BioScan AI) using React, FastAPI, PyTorch, and JWT auth, real-time X-ray analysis.'
   },
   {
     title: 'Real-Time Team Chat App',
@@ -26,7 +33,7 @@ const projects = [
   {
     title: 'Blog-Nest Full Stack App',
     img: blogImg,
-    github: 'https://github.com/Karunakar-reddy-04/Real_Time_Messaging_Platform',
+    github: 'https://github.com/Karunakar-reddy-04/BlogNest',
     desc: 'Node.js + React blog app with JWT, PostgreSQL, Elasticsearch, and full CRUD capabilities.'
   }
 ];
