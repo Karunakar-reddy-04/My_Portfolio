@@ -27,11 +27,13 @@ function App() {
       return <EducationSection />;
     case 'projects':
       return <ProjectsSection />;
-      case 'contact':
-  return <ContactSection />;
-
+    case 'contact':
+      return <ContactSection />;
+    default:
+      return <HeroSection />; // or null or a "NotFound" component
   }
 };
+
 
 useEffect(() => {
   const progressBar = document.getElementById('scroll-progress');
